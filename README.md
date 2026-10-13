@@ -44,7 +44,7 @@ calorie-counter/
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/Taunt-byte/Calorie-counter.git
    ```
 
 2. Navigate to the project directory:
