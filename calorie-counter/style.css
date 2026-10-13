@@ -1,0 +1,315 @@
+
+:root {
+    --background: #f4f6f8;
+    --surface: #ffffff;
+    --primary: #16a36a;
+    --primary-dark: #108453;
+    --text: #1c2935;
+    --muted: #748091;
+    --border: #e4e9ee;
+    --danger: #dc4545;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #9ce5c4;
+    outline-offset: 2px;
+}
+
+.container {
+    width: min(100% - 32px, 680px);
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: clamp(2rem, 7vw, 3rem);
+}
+
+.header > p:last-child,
+.muted,
+footer {
+    color: var(--muted);
+}
+
+.card {
+    background: var(--surface);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 18px rgb(28 41 53 / 4%);
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 0 0 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fff;
+    color: var(--text);
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+.goal-form {
+    display: flex;
+    gap: 10px;
+}
+
+.goal-form input {
+    flex: 1;
+}
+
+.goal-form button,
+.primary-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 12px 16px;
+    font-weight: 700;
+}
+
+.goal-form button:hover,
+.primary-button:hover {
+    background: var(--primary-dark);
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0 22px;
+}
+
+.summary > div {
+    background: #f5faf7;
+    border: 1px solid #e3f2e9;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.summary span,
+.summary strong,
+.summary small {
+    display: block;
+}
+
+.summary span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.summary strong {
+    font-size: 2rem;
+    overflow-wrap: anywhere;
+}
+
+.summary small {
+    color: var(--muted);
+}
+
+.progress-track {
+    height: 12px;
+    overflow: hidden;
+    background: #e8ecef;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: var(--primary);
+    border-radius: inherit;
+    transition: width 250ms ease;
+}
+
+.progress-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.primary-button {
+    width: 100%;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.section-heading h2 {
+    margin-bottom: 0;
+}
+
+.text-button {
+    background: transparent;
+    border: none;
+    color: var(--danger);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.text-button:hover {
+    text-decoration: underline;
+}
+
+.muted {
+    font-size: 0.85rem;
+}
+
+.food-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+}
+
+.food-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.food-item:last-child {
+    border-bottom: none;
+}
+
+.food-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.food-info strong,
+.food-info span {
+    display: block;
+}
+
+.food-info span {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.food-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.food-calories {
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.delete-button {
+    border: 1px solid #f2d6d6;
+    background: #fff5f5;
+    color: var(--danger);
+    border-radius: 8px;
+    padding: 7px 10px;
+}
+
+.delete-button:hover {
+    background: #ffe5e5;
+}
+
+.empty-state {
+    padding: 24px 0;
+    text-align: center;
+    color: var(--muted);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: min(100% - 20px, 680px);
+        padding-top: 24px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .goal-form {
+        flex-direction: column;
+    }
+
+    .summary strong {
+        font-size: 1.6rem;
+    }
+
+    .food-item {
+        align-items: flex-start;
+    }
+
+    .food-actions {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 6px;
+    }
+}

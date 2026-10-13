@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acompanhe suas calorias diárias com um contador simples.">
+    <title>Calorie Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <p class="eyebrow">SEU ACOMPANHAMENTO DIÁRIO</p>
+            <h1>Calorie Counter</h1>
+            <p>Registre suas refeições e acompanhe seu consumo.</p>
+        </header>
+
+        <section class="card goal-card">
+            <label for="daily-goal">Sua meta diária de calorias</label>
+
+            <form id="goal-form" class="goal-form">
+                <input
+                    type="number"
+                    id="daily-goal"
+                    min="1"
+                    max="100000"
+                    value="2000"
+                    required
+                >
+                <button type="submit">Atualizar meta</button>
+            </form>
+
+            <div class="summary">
+                <div>
+                    <span>Consumidas</span>
+                    <strong id="total-calories">0</strong>
+                    <small>kcal</small>
+                </div>
+                <div>
+                    <span>Restantes</span>
+                    <strong id="remaining-calories">2000</strong>
+                    <small>kcal</small>
+                </div>
+            </div>
+
+            <div
+                class="progress-track"
+                id="progress-track"
+                role="progressbar"
+                aria-label="Progresso da meta diária"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+            >
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="progress-label" id="progress-label">0% da meta atingida</p>
+        </section>
+
+        <section class="card">
+            <h2>Adicionar alimento</h2>
+
+            <form id="food-form">
+                <div class="form-group">
+                    <label for="food-name">Nome do alimento</label>
+                    <input
+                        type="text"
+                        id="food-name"
+                        placeholder="Ex.: Banana"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="food-calories">Calorias (kcal)</label>
+                    <input
+                        type="number"
+                        id="food-calories"
+                        placeholder="Ex.: 105"
+                        min="0"
+                        max="100000"
+                        step="1"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-button">
+                    + Adicionar alimento
+                </button>
+            </form>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <h2>Diário alimentar</h2>
+                <button type="button" id="clear-button" class="text-button">
+                    Limpar tudo
+                </button>
+            </div>
+
+            <p id="food-count" class="muted">0 alimentos registrados</p>
+
+            <ul id="food-list" class="food-list" aria-live="polite">
+                <li class="empty-state">
+                    Nenhum alimento registrado. Adicione sua primeira refeição!
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>Calorie Counter · Projeto desenvolvido com JavaScript puro.</p>
+            <p>Os valores calóricos devem ser informados pelo usuário.</p>
+        </footer>
+    </main>
+</body>
+</html>
