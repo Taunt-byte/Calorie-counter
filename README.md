@@ -82,6 +82,10 @@ Alternatively, you can use the Live Server extension in Visual Studio Code for l
 - Edit existing food entries.
 - Add meal summaries and nutritional information.
 
+## Demo
+
+![Texto Alternativo](assets/preview.png)
+
 ## Project Goals
 
 The goal of this project is to practice front-end web development and strengthen core JavaScript skills by building a functional application without relying on frameworks.
